@@ -9,3 +9,4 @@ spec:
       - image: docker.io/dotnetroundhouse/roundhouse
         name: job
       restartPolicy: Never
+      shareProcessNamespace: true
