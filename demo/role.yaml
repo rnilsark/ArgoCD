@@ -4,6 +4,16 @@ metadata:
   namespace: default
   name: service-reader
 rules:
-- apiGroups: [""] # "" indicates the core API group
-  resources: ["services"]
-  verbs: ["get", "watch", "list"]
+  - apiGroups:
+      - ""
+      - "apps"
+      - "batch"
+    resources:
+      - endpoints
+      - deployments
+      - pods
+      - jobs
+    verbs:
+      - get
+      - list
+      - watch
