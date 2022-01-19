@@ -1,0 +1,11 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job
+spec:
+  template:
+    spec:
+      containers:
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+        name: job
+      restartPolicy: Never
