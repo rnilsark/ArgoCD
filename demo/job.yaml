@@ -9,7 +9,8 @@ spec:
         - image: docker.io/dotnetroundhouse/roundhouse
           name: job
           args: 
-            - -c="Server=localhost;Database=test;Username=postgres;Password=postgres;Maximum Pool Size=24;Max Auto Prepare=256;"
+            - --servername=localhost
+            - --datebase=test
             - --silent
             - --databasetype=postgres
             - --donotcreatedatabase
