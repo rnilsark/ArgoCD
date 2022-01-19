@@ -8,5 +8,6 @@ spec:
       containers:
       - image: docker.io/dotnetroundhouse/roundhouse
         name: job
+        args: "--silent"
       restartPolicy: Never
       shareProcessNamespace: true
