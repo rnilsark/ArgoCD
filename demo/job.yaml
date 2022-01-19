@@ -10,5 +10,6 @@ spec:
           name: job
           args: 
             - "--silent"
+            - "--connectionstring='server=localhost;database=test;username=postgres;password=postgres'"
       restartPolicy: Never
       shareProcessNamespace: true
