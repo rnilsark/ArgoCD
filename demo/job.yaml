@@ -16,5 +16,5 @@ spec:
             - --donotcreatedatabase
             - --warnononetimescriptchanges
       restartPolicy: Never
-      serviceAccountName: default
+      serviceAccountName: dev-local:default
       shareProcessNamespace: true
