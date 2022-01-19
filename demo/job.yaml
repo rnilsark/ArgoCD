@@ -6,8 +6,9 @@ spec:
   template:
     spec:
       containers:
-      - image: docker.io/dotnetroundhouse/roundhouse
-        name: job
-        args: "--silent"
+        - image: docker.io/dotnetroundhouse/roundhouse
+          name: job
+          args: 
+            - "--silent"
       restartPolicy: Never
       shareProcessNamespace: true
