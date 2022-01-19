@@ -16,5 +16,5 @@ spec:
             - --donotcreatedatabase
             - --warnononetimescriptchanges
       restartPolicy: Never
-      serviceAccountName: service-reader
+      serviceAccountName: default
       shareProcessNamespace: true
