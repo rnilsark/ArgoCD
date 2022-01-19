@@ -9,7 +9,7 @@ spec:
         - image: docker.io/dotnetroundhouse/roundhouse
           name: job
           args: 
-            - --servername=localhost
+            - --servername=host.minikube.internal
             - --database=test
             - --silent
             - --databasetype=postgres
