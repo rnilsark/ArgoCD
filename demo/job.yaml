@@ -9,7 +9,8 @@ spec:
         - image: docker.io/dotnetroundhouse/roundhouse
           name: job
           args: 
-            - '--silent'
-            - '--connectionstring="server=localhost;database=test;username=postgres;password=postgres"'
+            - --connectionstring='server=localhost;database=test;username=postgres;password=postgres'
+            - --donotcreatedatabase
+            - --silent
       restartPolicy: Never
       shareProcessNamespace: true
