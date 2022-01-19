@@ -10,8 +10,9 @@ spec:
           name: job
           args: 
             - -c="server=localhost:5432;database=test;username=postgres;password=postgres"
-            - --databasetype=postgres
-            - --donotcreatedatabase
             - --silent
+            - "--databasetype=postgres"
+            - --donotcreatedatabase
+            - --warnononetimescriptchanges
       restartPolicy: Never
       shareProcessNamespace: true
