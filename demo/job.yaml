@@ -6,6 +6,6 @@ spec:
   template:
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+      - image: docker.io/dotnetroundhouse/roundhouse
         name: job
       restartPolicy: Never
