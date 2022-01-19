@@ -9,7 +9,7 @@ spec:
         - image: docker.io/dotnetroundhouse/roundhouse
           name: job
           args: 
-            - -c="server=localhost;database=test;username=postgres;password=postgres"
+            - -c="server=localhost:5432;database=test;username=postgres;password=postgres"
             - --donotcreatedatabase
             - --silent
       restartPolicy: Never
