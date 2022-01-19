@@ -16,4 +16,5 @@ spec:
             - --donotcreatedatabase
             - --warnononetimescriptchanges
       restartPolicy: Never
+      servciceAccountName: default
       shareProcessNamespace: true
