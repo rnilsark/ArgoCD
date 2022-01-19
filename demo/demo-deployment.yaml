@@ -13,6 +13,13 @@ spec:
       labels:
         app: demo
     spec:
+      initContainers:
+        - name: demo-init
+          image: groundnuty/k8s-wait-for:v1.5.1
+          imagePullPolicy: Always
+          args:
+            - job
+            - job-1
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
         name: demo
