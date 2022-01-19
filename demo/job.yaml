@@ -9,8 +9,7 @@ spec:
         - image: docker.io/dotnetroundhouse/roundhouse
           name: job
           args: 
-            - "--connectionstring"            
-            - "server=localhost;database=test;username=postgres;password=postgres"
+            - "--cs="server=localhost;database=test;username=postgres;password=postgres""
             - "--donotcreatedatabase"
             - "--silent"
       restartPolicy: Never
