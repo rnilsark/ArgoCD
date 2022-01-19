@@ -10,7 +10,7 @@ spec:
           name: job
           args: 
             - --servername=localhost
-            - --datebase=test
+            - --database=test
             - --silent
             - --databasetype=postgres
             - --donotcreatedatabase
