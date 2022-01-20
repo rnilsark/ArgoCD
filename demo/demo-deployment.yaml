@@ -19,7 +19,7 @@ spec:
           imagePullPolicy: Always
           args:
             - job
-            - kustomize-job-2
+            - kustomize-job-3
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
         name: demo
