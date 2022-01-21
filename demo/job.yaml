@@ -1,13 +1,14 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: job-4
+  name: job-5 # versioned like the image
 spec:
   template:
     spec:
       containers:
-        - image: docker.io/dotnetroundhouse/roundhouse
+        - image: docker.io/dotnetroundhouse/roundhouse:1.3.1 # roundhouse to be wrapped in image tagged with same version as app
           name: job
+
           args: 
             - --cs
             - "Server=host.minikube.internal;Database=test;Username=postgres;Password=postgres;"
