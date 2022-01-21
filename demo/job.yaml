@@ -1,18 +1,20 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: job-6 # versioned like the image
+  name: job-7 # versioned like the image
 spec:
   template:
     spec:
       containers:
-        - name: job 
+        - args: 
+          - --cs
+          - "Server=host.minikube.internal;Database=test;Username=postgres;Password=postgres;"
+          - --silent
+          - --databasetype=postgres
+          - --donotcreatedatabase
+          - --warnononetimescriptchanges
+          name: job 
           image: docker.io/dotnetroundhouse/roundhouse:1.3.1 # roundhouse to be wrapped in image tagged with same version as app
-          args: 
-            - --cs
-            - "Server=host.minikube.internal;Database=test;Username=postgres;Password=postgres;"
-            - --silent
-            - --databasetype=postgres
-            - --donotcreatedatabase
-            - --warnononetimescriptchanges
+          imagePullPolicy: Always
+          
       restartPolicy: Never
