@@ -9,7 +9,7 @@ spec:
         - image: docker.io/dotnetroundhouse/roundhouse
           name: job
           args: 
-            - --cs="Server=host.minikube.internal;Database=test;Username=postgres;Password=postgres;Maximum Pool Size=24;Max Auto Prepare=256;"
+            - --cs="Server=host.minikube.internal;Database=test;Username=postgres;Password=postgres;"
             - --silent
             - --databasetype=postgres
             - --donotcreatedatabase
