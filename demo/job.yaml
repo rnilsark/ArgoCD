@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: job-3
+  name: job-4
 spec:
   template:
     spec:
@@ -9,8 +9,7 @@ spec:
         - image: docker.io/dotnetroundhouse/roundhouse
           name: job
           args: 
-            - --servername=host.minikube.internal
-            - --database=test
+            - --cs="Server=host.minikube.internal;Database=test;Username=postgres;Password=postgres;Maximum Pool Size=24;Max Auto Prepare=256;"
             - --silent
             - --databasetype=postgres
             - --donotcreatedatabase
