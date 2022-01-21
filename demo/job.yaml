@@ -18,4 +18,3 @@ spec:
             - --warnononetimescriptchanges
       restartPolicy: Never
       serviceAccountName: default
-      shareProcessNamespace: true
